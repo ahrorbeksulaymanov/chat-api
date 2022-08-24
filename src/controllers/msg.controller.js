@@ -1,5 +1,7 @@
 import { InternalServerError } from "../utils/errors.js";
 import { read, write } from "../utils/index.js";
+import path from 'path'
+// import fs from 'fs'
 
 let msgController = {
   GET: (req, res, next) => {
@@ -24,18 +26,34 @@ let msgController = {
     }
   },
 
+
   POST: (req, res, next) => {
     try {
       let { userId, title } = req.body;
       let messages = read("msg");
-      let newMsg = {
-        id: messages?.at(-1).id + 1,
-        userId,
-        title,
-        created_at: new Date.now()
-      };
+      const time = new Date()
+      let newMsg = {}
+      console.log(req.files);
+      if(req.files?.title){
+        let fileName = new Date().getMilliseconds() + req.files?.title?.name.replace(/\s/g, "")
+        req.files?.title.mv(path.join(process.cwd(), 'src', 'uploads', fileName))
+        newMsg = {
+          id: messages?.at(-1).id + 1,
+          userId,
+          title : fileName,
+          type: "file",
+          created_at: time.getHours() + ":" + time.getMinutes()
+        };
+      }else{
+        newMsg = {
+          id: messages?.at(-1).id + 1,
+          userId,
+          title,
+          type: "txt",
+          created_at: time.getHours() + ":" + time.getMinutes()
+        };
+      }
       messages.push(newMsg);
-
       write("msg", messages);
       return res.status(201).send({
         status: 201,

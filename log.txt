@@ -10,3 +10,9 @@
 /register ---- POST ---- Wed Aug 24 2022 16:39:16 GMT+0500 (Yekaterinburg Standard Time) ------ Cannot read properties of null (reading 'image')
 /register ---- POST ---- Wed Aug 24 2022 16:44:26 GMT+0500 (Yekaterinburg Standard Time) ------ Cannot read properties of null (reading 'image')
 /register ---- POST ---- Wed Aug 24 2022 17:48:50 GMT+0500 (Yekaterinburg Standard Time) ------ images is not defined
+/messages ---- POST ---- Wed Aug 24 2022 19:41:32 GMT+0500 (Yekaterinburg Standard Time) ------ Date.now is not a constructor
+/messages ---- POST ---- Wed Aug 24 2022 19:43:54 GMT+0500 (Yekaterinburg Standard Time) ------ Date.now is not a constructor
+/messages ---- POST ---- Wed Aug 24 2022 19:44:55 GMT+0500 (Yekaterinburg Standard Time) ------ Date.now is not a constructor
+/messages ---- POST ---- Wed Aug 24 2022 19:45:27 GMT+0500 (Yekaterinburg Standard Time) ------ Date.now is not a constructor
+/messages ---- POST ---- Wed Aug 24 2022 19:46:31 GMT+0500 (Yekaterinburg Standard Time) ------ Date.now is not a constructor
+/messages ---- POST ---- Wed Aug 24 2022 20:20:33 GMT+0500 (Yekaterinburg Standard Time) ------ path is not defined

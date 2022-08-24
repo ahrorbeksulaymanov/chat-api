@@ -23,7 +23,7 @@ let userController = {
   POST: (req, res, next) => {
     try {
       let { userName, password, gender, contact } = req.body;
-      let fileName = Date.now() + req.files.image.name.replace(/\s/g, "")
+      let fileName = new Date().getMilliseconds() + req.files.image.name.replace(/\s/g, "")
 
       let users = read("users");
       let newUser = {

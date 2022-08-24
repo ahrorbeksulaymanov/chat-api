@@ -3,30 +3,77 @@
         "id": 1,
         "userId": 1,
         "title": "salom, salom, salom",
-        "created_at": "time"
+        "created_at": "time",
+        "type": "txt"
     },
     {
         "id": 2,
         "userId": 3,
         "title": "salom, salom",
-        "created_at": "time"
+        "created_at": "time",
+        "type": "txt"
     },
     {
         "id": 3,
         "userId": 3,
         "title": "nima gap",
-        "created_at": "time"
+        "created_at": "time",
+        "type": "txt"
     },
     {
         "id": 4,
         "userId": 1,
         "title": "tinchlik eeeeeee",
-        "created_at": "time"
+        "created_at": "time",
+        "type": "txt"
     },
     {
         "id": 5,
         "userId": 1,
         "title": "tinchlik ttttttt",
-        "created_at": "time"
+        "created_at": "time",
+        "type": "txt"
+    },
+    {
+        "id": 6,
+        "userId": 1,
+        "title": "tinchlik eeeeeee",
+        "created_at": "time",
+        "type": "txt"
+    },
+    {
+        "id": 7,
+        "userId": "3",
+        "title": "sdfsdfsdf",
+        "created_at": "19:51",
+        "type": "txt"
+    },
+    {
+        "id": 8,
+        "userId": "3",
+        "title": "fdsfsdfdsfds",
+        "type": "txt",
+        "created_at": "20:6"
+    },
+    {
+        "id": 9,
+        "userId": "3",
+        "title": "ddddd123",
+        "type": "txt",
+        "created_at": "20:20"
+    },
+    {
+        "id": 10,
+        "userId": "3",
+        "title": "Wed Aug 24 2022 20:24:43 GMT+0500 (Yekaterinburg Standard Time)GreenMungBeans.jpg",
+        "type": "file",
+        "created_at": "20:24"
+    },
+    {
+        "id": 11,
+        "userId": "3",
+        "title": "18Group_10-removebg-preview.png",
+        "type": "file",
+        "created_at": "20:28"
     }
 ]

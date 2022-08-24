@@ -28,4 +28,4 @@ app.use( msgRouter )
 
 app.use(errorHandler)
 
-app.listen( 4000, () => console.log("server is running on port 4000") )
+app.listen( process.env.PORT || 4000, () => console.log("server is running on port 4000") )

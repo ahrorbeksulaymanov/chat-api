@@ -12,5 +12,12 @@
         "password": "9ce20d8ac076724b781b1e16dd37114228d3674084f6540fe537c08d76ba9c84",
         "contact": "123456789123",
         "image": "1661345570288Group10.png"
+    },
+    {
+        "id": 3,
+        "userName": "admin1234",
+        "password": "ac9689e2272427085e35b9d3e3e8bed88cb3434828b43b86fc0596cad4c6e270",
+        "contact": "sssssssssssss",
+        "image": "1661351844260SpecificationofBlackEyedbeans_001.jpg"
     }
 ]
