@@ -33,9 +33,8 @@ let msgController = {
       let messages = read("msg");
       const time = new Date()
       let newMsg = {}
-      console.log(req.files);
       if(req.files?.title){
-        let fileName = new Date().getMilliseconds() + req.files?.title?.name.replace(/\s/g, "")
+        let fileName = Date.now() + req.files?.title?.name.replace(/\s/g, "")
         req.files?.title.mv(path.join(process.cwd(), 'src', 'uploads', fileName))
         newMsg = {
           id: messages?.at(-1).id + 1,

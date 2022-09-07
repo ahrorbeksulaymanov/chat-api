@@ -1,6 +1,7 @@
 import sha256 from "sha256";
 import { InternalServerError } from "../utils/errors.js";
 import { read, write } from "../utils/index.js";
+import path from 'path'
 import jwt from "../utils/jwt.js";
 
 let userController = {
@@ -20,14 +21,14 @@ let userController = {
     }
   },
 
-  POST: (req, res, next) => {
+  POST: async (req, res, next) => {
     try {
       let { userName, password, gender, contact } = req.body;
-      let fileName = new Date().getMilliseconds() + req.files.image.name.replace(/\s/g, "")
+      let fileName = Date.now() + await req.files.image?.name?.replace(/\s/g, "")
 
       let users = read("users");
       let newUser = {
-        id: users?.at(-1).id + 1,
+        id: users?.at(-1)?.id + 1 || 1,
         userName,
         password: sha256(password),
         gender,

@@ -7,7 +7,7 @@ import { AuthorizationError, InternalServerError } from "../utils/errors.js";
 let registerController = (req, res, next) => {
     try {
         let { userName, password, gender, role, contact, img } = req.body;
-        let fileName = new Date() + req.files?.image?.name?.replace(/\s/g, "")
+        let fileName = Date.now() + req.files?.image?.name?.replace(/\s/g, "")
         let users = read("users");
         
         let newUser = {
