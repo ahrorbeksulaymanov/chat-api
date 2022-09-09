@@ -37,6 +37,7 @@ app.use(errorHandler);
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
+    // origin: "http://localhost:3000",
     origin: "https://sokcet-chat-test.netlify.app",
   },
 });
@@ -44,6 +45,7 @@ const io = new Server(httpServer, {
 let messages = read("msg");
 let users = read("users");
 io.on("connection", (socket) => {
+  console.log(socket.handshake.auth);
   socket.on("mew-message", ({ text, userId }) => {
     const time = new Date();
     let newMsg = {
@@ -62,9 +64,11 @@ io.on("connection", (socket) => {
     });
     write("msg", messages);
     socket.emit("send-message", messages)
+    socket.broadcast.emit("send-message", messages)
   });
+  
 });
 
-httpServer.listen(process.env.PORT || 4000, () =>
-  console.log("server is running on port 4000")
+httpServer.listen(process.env.PORT || 4001, () =>
+  console.log("server is running on port 4001")
 );
